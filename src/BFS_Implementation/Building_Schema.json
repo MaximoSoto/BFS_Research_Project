@@ -1,0 +1,87 @@
+{
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "$id": "https://raw.githubusercontent.com/MaximoSoto/BFS-Implementation/refs/heads/main/Building_Schema.json",
+    "title": "Building Schema",
+    "description": "The schema for building graph data.",
+    "type": "object",
+
+    "required": ["building_name", "floors"],
+    "properties": {
+        "$schema": {
+            "type": "string",
+            "description": "Allows the schema to be used by a JSON file."
+        },
+
+        "building_name": {
+            "description": "Name of building",
+            "type": "string"
+        },
+
+        "floors": {
+            "description": "A list of floors in the building.",
+            "type": "array",
+            "minItems": 1,
+            "items": {
+                "type": "object",
+                "required": ["floorNumber", "nodes"],
+                "properties": {
+                    "floorNumber": {
+                        "description": "Floor Number",
+                        "type": "integer"
+                    },
+
+                    "nodes": {
+                        "description": "Points on the floor",
+                        "type": "array",
+                        "minItems": 1,
+                        "items": {
+                            "type": "object",
+                            "required": ["id", "isExit", "x", "y", "edges"],
+                            "properties": {
+                                "id": {
+                                    "description": "Node Label",
+                                    "type": "string"
+                                },
+
+                                "isExit": {
+                                    "description": "Is this node an exit to the building?",
+                                    "type": "boolean"
+                                },
+
+                                "x": {
+                                    "description": "The x-coordinate of the node",
+                                    "type": "number"
+                                },
+
+                                "y": {
+                                    "description": "The y-coordinate of the node",
+                                    "type": "number"
+                                },
+
+                                "edges": {
+                                    "description": "Connections between nodes, such as hallways",
+                                    "type": "array",
+                                    "items": {
+                                        "type": "object",
+                                        "required": ["nodeID"],
+                                        "properties": {
+                                            "nodeID": {
+                                                "description": "ID of the node that this node connects to.",
+                                                "type": "string"
+                                            }
+
+                                        },
+                                        "additionalProperties": false
+                                    }
+                                }
+                            },
+                            "additionalProperties": false
+                        }
+                    }
+                },
+                "additionalProperties": false
+            }
+        }
+    },
+    "additionalProperties": false
+}

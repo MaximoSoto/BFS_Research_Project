@@ -1,0 +1,461 @@
+{
+    "$schema": "./Building_Schema.json",
+    "building_name": "Building 9",
+    "floors": [
+        {
+            "floorNumber": 1,
+            "nodes": [
+                {
+                    "id": "F1J1",
+                    "isExit": false,
+                    "x": 0,
+                    "y": 0,
+                    "edges": [
+                        {
+                            "nodeID": "F1E1"
+                        },
+
+                        {
+                            "nodeID": "F1S2"
+                        },
+
+                        {
+                            "nodeID": "F1J2"
+                        }
+                    ]
+                },
+
+                {
+                    "id": "F1E1",
+                    "isExit": true,
+                    "x": 0,
+                    "y": -5,
+                    "edges": [
+                        {
+                            "nodeID": "F1J1"
+                        }
+                    ]
+                },
+
+                {
+                    "id": "F1J2",
+                    "isExit": false,
+                    "x": 0,
+                    "y": 5,
+                    "edges": [
+                        {
+                            "nodeID": "F1J1"
+                        },
+
+                        {
+                            "nodeID": "F1S1"
+                        },
+
+                        {
+                            "nodeID": "F1E2"
+                        }
+                    ]
+                },
+
+                {
+                    "id": "F1E2",
+                    "isExit": true,
+                    "x": 0,
+                    "y": 10,
+                    "edges": [
+                        {
+                            "nodeID": "F1J2"
+                        }
+                    ]
+                },
+
+                {
+                    "id": "F1S1",
+                    "isExit": false,
+                    "x": 2,
+                    "y": 5,
+                    "edges": [
+                        {
+                            "nodeID": "F1J2"
+                        },
+
+                        {
+                            "nodeID": "F1J3"
+                        },
+
+                        {
+                            "nodeID": "F2S1"
+                        }
+                    ]
+                },
+
+                {
+                    "id": "F1J3",
+                    "isExit": false,
+                    "x": 10,
+                    "y": 5,
+                    "edges": [
+                        {
+                            "nodeID": "F1S1"
+                        },
+
+                        {
+                            "nodeID": "F1J4"
+                        }
+                    ]
+                },
+
+                {
+                    "id": "F1J4",
+                    "isExit": false,
+                    "x": 10,
+                    "y": 0,
+                    "edges": [
+                        {
+                            "nodeID": "F1S2"
+                        },
+
+                        {
+                            "nodeID": "F1J3"
+                        },
+
+                        {
+                            "nodeID": "F1E3"
+                        }
+                    ]
+                },
+
+                {
+                    "id": "F1S2",
+                    "isExit": false,
+                    "x": 8,
+                    "y": 0,
+                    "edges": [
+                        {
+                            "nodeID": "F1J1"
+                        },
+
+                        {
+                            "nodeID": "F1J4"
+                        },
+
+                        {
+                            "nodeID": "F2S2"
+                        }
+                    ]
+                },
+
+                {
+                    "id": "F1E3",
+                    "isExit": true,
+                    "x": 15,
+                    "y": 0,
+                    "edges": [
+                        {
+                            "nodeID": "F1J4"
+                        }
+                    ]
+                },
+
+                {
+                    "id": "F1S3",
+                    "isExit": false,
+                    "x": 25,
+                    "y": 0,
+                    "edges": [
+                        {
+                            "nodeID": "F2S3"
+                        },
+
+                        {
+                            "nodeID": "F1E4"
+                        }
+                    ]
+                },
+
+                {
+                    "id": "F1E4",
+                    "isExit": true,
+                    "x": 20,
+                    "y": 0,
+                    "edges": [
+                        {
+                            "nodeID": "F1S3"
+                        }
+                    ]
+                }
+            ]
+        },
+
+        {
+            "floorNumber": 2,
+            "nodes": [
+                {
+                    "id": "F2J1",
+                    "isExit": false,
+                    "x": 0,
+                    "y": 0,
+                    "edges": [
+                        {
+                            "nodeID": "F2J2"
+                        },
+
+                        {
+                            "nodeID": "F2S2"
+                        }
+                    ]
+                },
+
+                {
+                    "id": "F2J2",
+                    "isExit": false,
+                    "x": 0,
+                    "y": 5,
+                    "edges": [
+                        {
+                            "nodeID": "F2J1"
+                        },
+
+                        {
+                            "nodeID": "F2S1"
+                        }
+                    ]
+                },
+
+                {
+                    "id": "F2S1",
+                    "isExit": false,
+                    "x": 2,
+                    "y": 5,
+                    "edges": [
+                        {
+                            "nodeID": "F2J2"
+                        },
+
+                        {
+                            "nodeID": "F2J3"
+                        },
+
+                        {
+                            "nodeID": "F1S1"
+                        }
+                    ]
+                },
+
+                {
+                    "id": "F2J3",
+                    "isExit": false,
+                    "x": 10,
+                    "y": 5,
+                    "edges": [
+                        {
+                            "nodeID": "F2S1"
+                        },
+
+                        {
+                            "nodeID": "F2J4"
+                        }
+                    ]
+                },
+
+                {
+                    "id": "F2J4",
+                    "isExit": false,
+                    "x": 10,
+                    "y": 0,
+                    "edges": [
+                        {
+                            "nodeID": "F2J3"
+                        },
+
+                        {
+                            "nodeID": "F2S2"
+                        },
+
+                        {
+                            "nodeID": "F2J5"
+                        }
+                    ]
+                },
+
+                {
+                    "id": "F2S2",
+                    "isExit": false,
+                    "x": 8,
+                    "y": 0,
+                    "edges": [
+                        {
+                            "nodeID": "F2J1"
+                        },
+
+                        {
+                            "nodeID": "F2J4"
+                        },
+
+                        {
+                            "nodeID": "F1S2"
+                        }
+                    ]
+                },
+
+                {
+                    "id": "F2J5",
+                    "isExit": false,
+                    "x": 20,
+                    "y": 0,
+                    "edges": [
+                        {
+                            "nodeID": "F2J4"
+                        },
+
+                        {
+                            "nodeID": "F2J6"
+                        },
+
+                        {
+                            "nodeID": "F2S3"
+                        }
+                    ]
+                },
+
+                {
+                    "id": "F2J6",
+                    "isExit": false,
+                    "x": 20,
+                    "y": 5,
+                    "edges": [
+                        {
+                            "nodeID": "F2J5"
+                        },
+
+                        {
+                            "nodeID": "F2E1"
+                        },
+
+                        {
+                            "nodeID": "F2J7"
+                        }
+                    ]
+                },
+
+                {
+                    "id": "F2E1",
+                    "isExit": true,
+                    "x": 20,
+                    "y": 10,
+                    "edges": [
+                        {
+                            "nodeID": "F2J6"
+                        }
+                    ]
+                },
+
+                {
+                    "id": "F2J7",
+                    "isExit": false,
+                    "x": 30,
+                    "y": 5,
+                    "edges": [
+                        {
+                            "nodeID": "F2J6"
+                        },
+
+                        {
+                            "nodeID": "F2E2"
+                        },
+
+                        {
+                            "nodeID": "F2S4"
+                        }
+                    ]
+                },
+
+                {
+                    "id": "F2S3",
+                    "isExit": false,
+                    "x": 25,
+                    "y": 0,
+                    "edges": [
+                        {
+                            "nodeID": "F2J5"
+                        },
+
+                        {
+                            "nodeID": "F2J8"
+                        },
+
+                        {
+                            "nodeID": "F3S1"
+                        }
+                    ]
+                },
+
+                {
+                    "id": "F2J8",
+                    "isExit": false,
+                    "x": 30,
+                    "y": 0,
+                    "edges": [
+                        {
+                            "nodeID": "F2S3"
+                        },
+
+                        {
+                            "nodeID": "F2S4"
+                        },
+
+                        {
+                            "nodeID": "F2E2"
+                        }
+                    ]
+                },
+
+                {
+                    "id": "F2S4",
+                    "isExit": false,
+                    "x": 30,
+                    "y": 2,
+                    "edges": [
+                        {
+                            "nodeID": "F2J8"
+                        },
+
+                        {
+                            "nodeID": "F2J7"
+                        },
+
+                        {
+                            "nodeID": "F2E2"
+                        },
+
+                        {
+                            "nodeID": "F3S2"
+                        }
+                    ]
+                },
+
+                {
+                    "id": "F2E2",
+                    "isExit": true,
+                    "x": 35,
+                    "y": 2,
+                    "edges": [
+                        {
+                            "nodeID": "F2J8"
+                        },
+
+                        {
+                            "nodeID": "F2S4"
+                        },
+
+                        {
+                            "nodeID": "F2J7"
+                        }
+                    ]
+                }
+            ]
+        }
+
+    ]
+
+}
