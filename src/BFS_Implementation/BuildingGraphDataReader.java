@@ -6,20 +6,23 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.io.IOException;
 import java.util.HashSet;
+import java.util.Map;
 
 public class BuildingGraphDataReader {
 
     HashMap<String, Node> nodeInfo = new HashMap<>();
     HashSet<String> exits = new HashSet<>();
 
-    public HashMap<String, ArrayList<String>> readGraphData() {
-        HashMap<String, ArrayList<String>> map = new HashMap<>();
-        ArrayList<String> edges = new ArrayList<>();
+    public Map<String, Map<String, Double>> readGraphData() {
+        Map<String, Map<String, Double>> map = new HashMap<>();
+        Map<String, Double> edges = new HashMap<>();
         String id = "";
         boolean isExit = false;
-        int x = 0;
-        int y = 0;
-        int idNum = 1;
+        double x = 0;
+        double y = 0;
+        double z = 0;
+        String edgeID = "";
+        Double weight = 0.0;
 
         try {
             FileReader fileReader = new FileReader("src/BFS_Implementation/Building9.json");
@@ -50,13 +53,19 @@ public class BuildingGraphDataReader {
                 if(trimmedLine.contains("\"x\": ")) {
                     trimmedLine = trimmedLine.substring(
                             trimmedLine.indexOf(' ') + 1, trimmedLine.indexOf(','));
-                    x = Integer.parseInt(trimmedLine);
+                    x = Double.parseDouble(trimmedLine);
                 }
 
                 if(trimmedLine.contains("\"y\": ")) {
                     trimmedLine = trimmedLine.substring(
                             trimmedLine.indexOf(' ') + 1, trimmedLine.indexOf(','));
-                    y = Integer.parseInt(trimmedLine);
+                    y = Double.parseDouble(trimmedLine);
+                }
+
+                if(trimmedLine.contains("\"z\": ")) {
+                    trimmedLine = trimmedLine.substring(
+                            trimmedLine.indexOf(' ') + 1, trimmedLine.indexOf(','));
+                    z = Double.parseDouble(trimmedLine);
                 }
 
                 if(trimmedLine.contains("\"edges\": ")) {
@@ -65,15 +74,22 @@ public class BuildingGraphDataReader {
 
                         if(trimmedLine.contains("\"nodeID\": ")) {
                             trimmedLine = trimmedLine.substring(
-                                    trimmedLine.indexOf(' ') + 2, trimmedLine.length() - 1);
-                            edges.add(trimmedLine);
+                                    trimmedLine.indexOf(' ') + 2, trimmedLine.indexOf(',') - 1);
+                            edgeID = trimmedLine;
+                        }
+
+                        if(trimmedLine.contains("\"weight\": ")) {
+                            trimmedLine = trimmedLine.substring(
+                                    trimmedLine.indexOf(' ') + 1, trimmedLine.length() - 1);
+                            weight = Double.parseDouble(trimmedLine);
+                            edges.put(edgeID, weight);
                         }
                     }
 
-                    Node node = new Node(id, isExit, x, y);
+                    Node node = new Node(id, isExit, x, y, z);
                     nodeInfo.put(node.getID(), node);
                     if(isExit) {exits.add(id);}
-                    map.put(node.getID(), new ArrayList<>(edges));
+                    map.put(node.getID(), new HashMap<>(edges));
                     edges.clear();
                 }
 

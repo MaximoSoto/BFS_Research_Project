@@ -5,14 +5,16 @@ import java.util.ArrayList;
 public class Node {
     private String id;
     private boolean isExit;
-    private int x;
-    private int y;
+    private double x;
+    private double y;
+    private double z;
 
-    public Node(String id, boolean isExit, int x, int y) {
+    public Node(String id, boolean isExit, double x, double y, double z) {
         this.id = id;
         this.isExit = isExit;
         this.x = x;
         this.y = y;
+        this.z = z;
     }
 
     public String getID() {
@@ -23,12 +25,14 @@ public class Node {
         return isExit;
     }
 
-    public int getX() {
+    public double getX() {
         return x;
     }
 
-    public int getY() {
+    public double getY() {
         return y;
     }
+
+    public double getZ() {return z;}
 
 }
