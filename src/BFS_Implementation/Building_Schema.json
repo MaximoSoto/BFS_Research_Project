@@ -36,7 +36,7 @@
                         "minItems": 1,
                         "items": {
                             "type": "object",
-                            "required": ["id", "isExit", "x", "y", "edges"],
+                            "required": ["id", "isExit", "x", "y", "z", "edges"],
                             "properties": {
                                 "id": {
                                     "description": "Node Label",
@@ -58,16 +58,26 @@
                                     "type": "number"
                                 },
 
+                                "z": {
+                                    "description": "The z-coordinate of the node",
+                                    "type": "number"
+                                },
+
                                 "edges": {
                                     "description": "Connections between nodes, such as hallways",
                                     "type": "array",
                                     "items": {
                                         "type": "object",
-                                        "required": ["nodeID"],
+                                        "required": ["nodeID", "weight"],
                                         "properties": {
                                             "nodeID": {
                                                 "description": "ID of the node that this node connects to.",
                                                 "type": "string"
+                                            },
+
+                                            "weight": {
+                                                "description": "Distance from parent node to neighbor node.",
+                                                "type": "number"
                                             }
 
                                         },
