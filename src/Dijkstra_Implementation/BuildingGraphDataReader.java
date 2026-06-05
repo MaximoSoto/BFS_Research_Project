@@ -1,8 +1,7 @@
-package BFS_Implementation;
+package Dijkstra_Implementation;
 
 import java.io.FileReader;
 import java.io.BufferedReader;
-import java.util.ArrayList;
 import java.util.HashMap;
 import java.io.IOException;
 import java.util.HashSet;

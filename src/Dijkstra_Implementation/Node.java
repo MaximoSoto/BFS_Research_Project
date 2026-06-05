@@ -1,6 +1,4 @@
-package BFS_Implementation;
-
-import java.util.ArrayList;
+package Dijkstra_Implementation;
 
 public class Node {
     private String id;

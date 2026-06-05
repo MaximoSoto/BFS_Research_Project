@@ -1,4 +1,4 @@
-package BFS_Implementation;
+package Dijkstra_Implementation;
 
 import java.util.*;
 
